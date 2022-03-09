@@ -20,10 +20,9 @@ def url_generator():
     mycursor.execute(
         "CREATE TABLE amazon_product (title VARCHAR(255), image VARCHAR(255), price VARCHAR(255), details VARCHAR(255))")
 
-    df = pd.read_excel(r"C:/Users/Nakul Dalal/Desktop/amazon/coprd.xlsx",
+    df = pd.read_excel(r"C:/Users/Nakul Dalal/Desktop/amazon/covamz.xlsx",
                        sheet_name="Sheet1")
     list = []
-    db = []
 
     for row in df.itertuples():
         asin = getattr(row, "Asin")
